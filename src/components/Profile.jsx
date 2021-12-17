@@ -13,6 +13,9 @@ const Profile = () => {
       New post
     </div>
     <div>
+      Test posts
+    </div>
+    <div>
       Post 1
     </div>
     <div>
