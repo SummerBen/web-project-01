@@ -1,0 +1,29 @@
+.app-wrapper {
+  margin: 0 auto; /* выровнить по середине */
+  display: grid;
+  width: 1200px;
+  grid-template-areas: /* положение блоков на странице */
+  "h h"
+  "n c"; /* по горизонтали строки, по вертикали колонки */
+  grid-template-rows: 60px 1fr; /*параметры двух строк*/
+  grid-template-columns: 2fr 10 fr; /*параметры двух колонок*/
+  /* grid-gap: 10px; расстояние между элементами */
+}
+
+.header {
+grid-area: h;
+background-color: dodgerblue;
+}
+.header img { 
+  width: 30px;
+} /* если в header лежит img, то сделай ей размер 30 пикселей */
+
+.nav {
+  grid-area: n;
+  background-color: yellow;
+}
+
+.content {
+  grid-area: c;
+  background-color: red;
+}
