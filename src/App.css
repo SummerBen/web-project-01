@@ -10,20 +10,7 @@
   /* grid-gap: 10px; расстояние между элементами */
 }
 
-.header {
-grid-area: h;
-background-color: dodgerblue;
-}
-.header img { 
-  width: 30px;
-} /* если в header лежит img, то сделай ей размер 30 пикселей */
 
-.nav {
-  grid-area: n;
-  background-color: yellow;
-}
 
-.content {
-  grid-area: c;
-  background-color: red;
-}
+
+

@@ -1,0 +1,7 @@
+.header {
+  grid-area: h;
+  background-color: dodgerblue;
+  }
+  .header img { 
+    width: 30px;
+  } /* если в header лежит img, то сделай ей размер 30 пикселей */
