@@ -4,6 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+let dialogs = [
+  { id: 1, name: 'Keks' },
+  { id: 2, name: 'Marina' },
+  { id: 3, name: 'Diman' },
+  { id: 4, name: 'Andrew' },
+  { id: 5, name: 'Nixxon' }
+];
+
+let messages = [
+  { id: 1, message: 'С новым годом, гнида!' },
+  { id: 2, message: 'Слава роду славянскому!' }
+];
+
+let posts = [
+  { id: 1, message: 'Это я, ОЛД', likesCount: 10, dislikesCount: 0 },
+  { id: 2, message: 'Ыхыхыхы, привет это я, олд', likesCount: 32, dislikesCount: 14 }
+];
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -15,3 +34,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+export {dialogs, messages, posts};
