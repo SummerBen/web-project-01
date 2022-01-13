@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
-let dialogs = [
+let dialogsData = [
   { id: 1, name: 'Keks' },
   { id: 2, name: 'Marina' },
   { id: 3, name: 'Diman' },
@@ -13,19 +13,19 @@ let dialogs = [
   { id: 5, name: 'Nixxon' }
 ];
 
-let messages = [
+let messagesData = [
   { id: 1, message: 'С новым годом, гнида!' },
   { id: 2, message: 'Слава роду славянскому!' }
 ];
 
-let posts = [
-  { id: 1, message: 'Это я, ОЛД', likesCount: 10, dislikesCount: 0 },
-  { id: 2, message: 'Ыхыхыхы, привет это я, олд', likesCount: 32, dislikesCount: 14 }
+let postsData = [
+  {id: 1, message: 'Это я, ОЛД', likesCount: 10, dislikesCount: 0},
+  {id: 2, message: 'Ыхыхыхы, привет это я, олд', likesCount: 32, dislikesCount: 14}
 ];
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App dialogsData={dialogsData} messagesData={messagesData} postsData={postsData}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -35,4 +35,4 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-export {dialogs, messages, posts};
+// export {dialogs, messages, posts};

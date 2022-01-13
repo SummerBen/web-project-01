@@ -1,10 +1,10 @@
-import { posts } from '../../..';
+// import { posts } from '../../..';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
 
-  let postsElements = posts.map(p => <Post message={p.message} likesCount={p.likesCount} dislikesCount={p.dislikesCount} />)
+  let postsElements = props.postsData.map(p => <Post message={p.message} likesCount={p.likesCount} dislikesCount={p.dislikesCount} />)
 
   return (
     <div className={s.postsBlock}>
