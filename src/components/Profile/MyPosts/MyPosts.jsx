@@ -1,4 +1,3 @@
-// import { posts } from '../../..';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
