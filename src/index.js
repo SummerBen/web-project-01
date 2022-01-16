@@ -3,29 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import state from './redux/state';
 
-
-let dialogsData = [
-  { id: 1, name: 'Keks' },
-  { id: 2, name: 'Marina' },
-  { id: 3, name: 'Diman' },
-  { id: 4, name: 'Andrew' },
-  { id: 5, name: 'Nixxon' }
-];
-
-let messagesData = [
-  { id: 1, message: 'С новым годом, гнида!' },
-  { id: 2, message: 'Слава роду славянскому!' }
-];
-
-let postsData = [
-  {id: 1, message: 'Это я, ОЛД', likesCount: 10, dislikesCount: 0},
-  {id: 2, message: 'Ыхыхыхы, привет это я, олд', likesCount: 32, dislikesCount: 14}
-];
 
 ReactDOM.render(
   <React.StrictMode>
-    <App dialogsData={dialogsData} messagesData={messagesData} postsData={postsData}/>
+    <App state={state} />
   </React.StrictMode>,
   document.getElementById('root')
 );
