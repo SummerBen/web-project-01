@@ -7,16 +7,35 @@
     padding: 10px;
 }
 
-.dialogsItems .dialog {
-
+.dialogsItems .dialog img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
 }
 
 .dialogsItems .active {
     color: white;
 }
 
-.messages {
+.notMyMessage {
     padding: 10px;
+}
+
+.notMyMessage img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px; 
+}
+
+.myMessage {
+    padding: 10px;
+    margin-left: 600px;
+}
+
+.myMessage {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px; 
 }
 
 .messages .message {
