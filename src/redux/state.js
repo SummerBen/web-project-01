@@ -14,10 +14,10 @@ let state = {
             { id: 5, name: 'Nixxon', avatar: 'https://sun9-44.userapi.com/impf/c626431/v626431606/4535e/Uxre72rlZDk.jpg?size=1620x2160&quality=96&sign=e7ebe96d0262d58924ca9adba51d07be&type=album' }
         ],
         messagesData: [
-            { id: 1, message: 'Привет!', myMessage: false, avatar: 'https://uscrap.com.au/wp-content/uploads/2018/08/default-feature-img-1.png' },
-            { id: 2, message: 'Йоу)', myMessage: true, avatar: 'https://sun9-83.userapi.com/impg/0KOUqUbsPb7aP5onFfD6dxMKDKpipDk6p_NJCg/0M5WRnibo6M.jpg?size=2560x1707&quality=96&sign=fa65d1d57bd8cb1b01036da94a38fe12&type=album' },
-            { id: 3, message: 'Че как?', myMessage: false, avatar: 'https://uscrap.com.au/wp-content/uploads/2018/08/default-feature-img-1.png' },
-            { id: 4, message: 'Нормасс', myMessage: true, avatar: 'https://sun9-83.userapi.com/impg/0KOUqUbsPb7aP5onFfD6dxMKDKpipDk6p_NJCg/0M5WRnibo6M.jpg?size=2560x1707&quality=96&sign=fa65d1d57bd8cb1b01036da94a38fe12&type=album' }
+            { id: 1, message: 'Привет!', myMessage: false, avatar: <img src='https://uscrap.com.au/wp-content/uploads/2018/08/default-feature-img-1.png' /> },
+            { id: 2, message: 'Йоу)', myMessage: true, avatar: <img src='https://sun9-83.userapi.com/impg/0KOUqUbsPb7aP5onFfD6dxMKDKpipDk6p_NJCg/0M5WRnibo6M.jpg?size=2560x1707&quality=96&sign=fa65d1d57bd8cb1b01036da94a38fe12&type=album' /> },
+            { id: 3, message: 'Че как?', myMessage: false, avatar: <img src='https://uscrap.com.au/wp-content/uploads/2018/08/default-feature-img-1.png' /> },
+            { id: 4, message: 'Нормасс', myMessage: true, avatar: <img src='https://sun9-83.userapi.com/impg/0KOUqUbsPb7aP5onFfD6dxMKDKpipDk6p_NJCg/0M5WRnibo6M.jpg?size=2560x1707&quality=96&sign=fa65d1d57bd8cb1b01036da94a38fe12&type=album'/> }
         ]
     }
 }
