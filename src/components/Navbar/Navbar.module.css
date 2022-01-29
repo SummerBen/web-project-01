@@ -13,3 +13,14 @@
   color: black;
   text-decoration: none;
 }
+
+
+.friendsBar {
+  color: white;
+  margin-top: 100px;
+}
+
+.friendsBarName {
+  font-size: 30px;
+  margin-bottom: 10%;
+}
