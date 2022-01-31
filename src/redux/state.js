@@ -29,4 +29,24 @@ let state = {
     }
 }
 
+export let sendMessage = (messageText) => {
+    let newMessage = {
+        id: 5,
+        message: messageText,
+        myMessage: true,
+        avatar: <img src='https://sun9-83.userapi.com/impg/0KOUqUbsPb7aP5onFfD6dxMKDKpipDk6p_NJCg/0M5WRnibo6M.jpg?size=2560x1707&quality=96&sign=fa65d1d57bd8cb1b01036da94a38fe12&type=album' />
+    };
+    state.dialogsPage.messagesData.push(newMessage);
+}
+
+export let addPost = (postText) => {
+    let newPost = {
+        id: 3,
+        message: postText,
+        likesCount: 0,
+        dislikesCount: 0
+    };
+    state.profilePage.postsData.push(newPost);
+}
+
 export default state;

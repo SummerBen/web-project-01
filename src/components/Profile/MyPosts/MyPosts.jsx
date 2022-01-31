@@ -10,9 +10,8 @@ const MyPosts = (props) => {
 
   let addPost = () => {
     let text = newPostsElement.current.value;
-    alert(text);
+    props.addPost(text);
   }
-
   return (
     <div className={s.postsBlock}>
       <h3>My posts</h3>
