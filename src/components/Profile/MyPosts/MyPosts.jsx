@@ -11,7 +11,9 @@ const MyPosts = (props) => {
   let addPost = () => {
     let text = newPostsElement.current.value;
     props.addPost(text);
+    newPostsElement.current.value = '';
   }
+
   return (
     <div className={s.postsBlock}>
       <h3>My posts</h3>
