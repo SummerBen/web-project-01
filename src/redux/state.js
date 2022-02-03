@@ -1,11 +1,13 @@
 import { rerenderEntireTree } from "../render";
 
 let state = {
+
     profilePage: {
         postsData: [
             { id: 1, message: 'Это я, ОЛД', likesCount: 10, dislikesCount: 0 },
             { id: 2, message: 'Ыхыхыхы, привет это я, олд', likesCount: 32, dislikesCount: 14 }
-        ]
+        ],
+        newPostText: ''
     },
     dialogsPage: {
         dialogsData: [
@@ -31,6 +33,8 @@ let state = {
     }
 }
 
+window.state = state;
+
 export let sendMessage = (messageText) => {
     let newMessage = {
         id: 5,
@@ -38,17 +42,24 @@ export let sendMessage = (messageText) => {
         myMessage: true,
         avatar: <img src='https://sun9-83.userapi.com/impg/0KOUqUbsPb7aP5onFfD6dxMKDKpipDk6p_NJCg/0M5WRnibo6M.jpg?size=2560x1707&quality=96&sign=fa65d1d57bd8cb1b01036da94a38fe12&type=album' />
     };
+    rerenderEntireTree(state)
     state.dialogsPage.messagesData.push(newMessage);
 }
 
-export let addPost = (postText) => {
+export let addPost = () => {
     let newPost = {
         id: 3,
-        message: postText,
+        message: state.profilePage.newPostText,
         likesCount: 0,
         dislikesCount: 0
     };
     state.profilePage.postsData.push(newPost);
+    rerenderEntireTree(state);
+    state.profilePage.newPostText = '';
+}
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
     rerenderEntireTree(state);
 }
 
