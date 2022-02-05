@@ -22,7 +22,8 @@ let state = {
             { id: 2, message: 'Йоу)', myMessage: true, avatar: <img src='https://sun9-83.userapi.com/impg/0KOUqUbsPb7aP5onFfD6dxMKDKpipDk6p_NJCg/0M5WRnibo6M.jpg?size=2560x1707&quality=96&sign=fa65d1d57bd8cb1b01036da94a38fe12&type=album' /> },
             { id: 3, message: 'Че как?', myMessage: false, avatar: <img src='https://uscrap.com.au/wp-content/uploads/2018/08/default-feature-img-1.png' /> },
             { id: 4, message: 'Нормасс', myMessage: true, avatar: <img src='https://sun9-83.userapi.com/impg/0KOUqUbsPb7aP5onFfD6dxMKDKpipDk6p_NJCg/0M5WRnibo6M.jpg?size=2560x1707&quality=96&sign=fa65d1d57bd8cb1b01036da94a38fe12&type=album' /> }
-        ]
+        ],
+        newMessageText: ''
     },
     sidebar: {
         friends: [
@@ -33,17 +34,21 @@ let state = {
     }
 }
 
-window.state = state;
-
-export let sendMessage = (messageText) => {
+export let sendMessage = () => {
     let newMessage = {
         id: 5,
-        message: messageText,
+        message: state.dialogsPage.newMessageText,
         myMessage: true,
         avatar: <img src='https://sun9-83.userapi.com/impg/0KOUqUbsPb7aP5onFfD6dxMKDKpipDk6p_NJCg/0M5WRnibo6M.jpg?size=2560x1707&quality=96&sign=fa65d1d57bd8cb1b01036da94a38fe12&type=album' />
     };
-    rerenderEntireTree(state)
     state.dialogsPage.messagesData.push(newMessage);
+    rerenderEntireTree(state)
+    state.dialogsPage.newMessageText = '';
+}
+
+export let updateNewMessageText = (newText) => {
+    state.dialogsPage.newMessageText = newText;
+    rerenderEntireTree(state);
 }
 
 export let addPost = () => {
