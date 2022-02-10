@@ -4,25 +4,26 @@ import React from "react";
 
 const MyPosts = (props) => {
 
-  let postsElements = props.postsData.map(p => <Post message={p.message} likesCount={p.likesCount} dislikesCount={p.dislikesCount} />)
+  let postsElements = props.store.state.profilePage.postsData.map(p => <Post message={p.message} likesCount={p.likesCount} dislikesCount={p.dislikesCount} />);
 
   let newPostsElement = React.createRef();
 
   let addPost = () => {
-    props.addPost();
+    props.store.addPost();
   }
 
   let onPostChange = () => {
-    let text = newPostsElement.current.value;
-    props.updateNewPostText(text);
+    let newText = newPostsElement.current.value;
+    props.store.updateNewPostText(newText);
   }
-
+  
+  debugger;
   return (
     <div className={s.postsBlock}>
       <h3>My posts</h3>
       <div>
         <div>
-          <textarea onChange={onPostChange} value={props.newPostText} ref={newPostsElement} />
+          <textarea onChange={onPostChange} value={props.store.newPostText} ref={newPostsElement} />
         </div>
         <div>
           <button onClick={addPost}>Add Post</button>
