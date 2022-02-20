@@ -5,7 +5,8 @@ export let store = {
         profilePage: {
             postsData: [
                 { id: 1, message: 'Это я, ОЛД', likesCount: 10, dislikesCount: 0 },
-                { id: 2, message: 'Ыхыхыхы, привет это я, олд', likesCount: 32, dislikesCount: 14 }
+                { id: 2, message: 'Ыхыхыхы, привет это я, олд', likesCount: 32, dislikesCount: 14 },
+                { id: 3, message: 'Я хуй', likesCount: 34, dislikesCount: 19 }
             ],
             newPostText: ''
         },
